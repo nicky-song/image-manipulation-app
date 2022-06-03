@@ -1,11 +1,16 @@
 import React, { useId } from 'react';
-import { TextField, InputAdornment } from '@mui/material';
-import LanguageIcon from '@mui/icons-material/Language';
+import { TextField, InputAdornment, IconButton } from '@mui/material';
+import HttpIcon from '@mui/icons-material/LanguageOutlined';
+import LaunchOutlinedIcon from '@mui/icons-material/LaunchOutlined';
 
 function ImageShowcase(props) {
   const imageKey = useId();
   const imageUrl = props.url;
   if (!imageUrl) return <nobr />;
+
+  const onOpenUrl = () => {
+    window.open(imageUrl, '_blank');
+  };
 
   return (
     <div className='image-showcase-wrapper'>
@@ -16,7 +21,14 @@ function ImageShowcase(props) {
             readOnly: true,
             startAdornment: (
               <InputAdornment position='start'>
-                <LanguageIcon color='primary' />
+                <HttpIcon color='primary' />
+              </InputAdornment>
+            ),
+            endAdornment: (
+              <InputAdornment position='end'>
+                <IconButton color='primary' size='small' onClick={onOpenUrl}>
+                  <LaunchOutlinedIcon />
+                </IconButton>
               </InputAdornment>
             ),
           }}

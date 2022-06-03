@@ -10,7 +10,7 @@ import {
 import { debounce } from 'lodash';
 
 import ColorPicker from './ColorPicker';
-import { IMAGE_LINKS, PARAMS, DEFAULT_ATTRIBUTES } from '../utils/constants';
+import { IMAGE_LINKS, PARAMS, DEFAULT_ATTRIBUTES, DEBOUNCE_DELAY } from '../utils/constants';
 
 function ImageAttributes(props) {
   const [src, setSrc] = useState(DEFAULT_ATTRIBUTES.src);
@@ -30,7 +30,7 @@ function ImageAttributes(props) {
     blendAlphaError: false,
   });
 
-  const debounced = useCallback(debounce(props.onUpdate, 350), []);
+  const debounced = useCallback(debounce(props.onUpdate, DEBOUNCE_DELAY), []);
 
   useEffect(() => {
     debounced(attributes);

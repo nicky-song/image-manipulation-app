@@ -49,3 +49,5 @@ export const DEFAULT_ATTRIBUTES = {
   'blend-mode': 'normal',
   'blend-alpha': 50,
 };
+
+export const DEBOUNCE_DELAY = 350;

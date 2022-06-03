@@ -1,4 +1,4 @@
-# Image Manipulation Application
+# Image Manipulation Platform
 A React application that performs image manipulation using parameters provided by [Imgix API](https://docs.imgix.com/apis/rendering).
 
 ## Demo

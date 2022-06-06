@@ -11,4 +11,4 @@ https://image-manipulation.netlify.app/
 1. Debounce delay of 350ms for saving bandwidth and reducing overload
 2. Integration of user-friendly color picker from [react-color](https://casesandberg.github.io/react-color/)
 3. [Material-UI](https://mui.com/) for all underlying UI components
-4. Mobile UI responsiveness
+4. Mobile-friendly UI
